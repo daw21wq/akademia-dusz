@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wydarzenia - Academy of Souls</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="nebula"></div>
+    <div class="stars" id="stars"></div>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-item">Strona główna</a>
+            <a href="wydarzenia.html" class="nav-item active">Wydarzenia</a>
+            <a href="galeria.html" class="nav-item">Galeria</a>
+            <a href="o-nas.html" class="nav-item">O nas</a>
+            <a href="kontakt.html" class="nav-item">Kontakt</a>
+        </div>
+    </nav>
+
+    <main>
+        <h1 class="title-3d">Wydarzenia</h1>
+        
+        <div class="content-section fade-in-section">
+            <div class="events-list">
+                <div class="event-item">
+                    <h3>Dzień Zakochanych - Londyn</h3>
+                    <button class="register-btn" onclick="toggleForm('event1')">Zapisz się</button>
+                    <div id="event1" class="registration-form">
+                        <form class="event-form" onsubmit="submitForm(event, 'Dzień Zakochanych - Londyn')">
+                            <input type="text" name="name" placeholder="Imię i nazwisko" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="tel" name="phone" placeholder="Telefon" required>
+                            <textarea name="message" placeholder="Dodatkowe informacje"></textarea>
+                            <button type="submit">Wyślij zgłoszenie</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="event-item">
+                    <h3>Egipt - ekspedycja naukowo-rozrywkowa</h3>
+                    <button class="register-btn" onclick="toggleForm('event2')">Zapisz się</button>
+                    <div id="event2" class="registration-form">
+                        <form class="event-form" onsubmit="submitForm(event, 'Egipt - ekspedycja naukowo-rozrywkowa')">
+                            <input type="text" name="name" placeholder="Imię i nazwisko" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="tel" name="phone" placeholder="Telefon" required>
+                            <textarea name="message" placeholder="Dodatkowe informacje"></textarea>
+                            <button type="submit">Wyślij zgłoszenie</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="event-item">
+                    <h3>Miłość, piasek i plaża - Południowa Francja</h3>
+                    <button class="register-btn" onclick="toggleForm('event3')">Zapisz się</button>
+                    <div id="event3" class="registration-form">
+                        <form class="event-form" onsubmit="submitForm(event, 'Miłość, piasek i plaża - Południowa Francja')">
+                            <input type="text" name="name" placeholder="Imię i nazwisko" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="tel" name="phone" placeholder="Telefon" required>
+                            <textarea name="message" placeholder="Dodatkowe informacje"></textarea>
+                            <button type="submit">Wyślij zgłoszenie</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="event-item">
+                    <h3>Londyn - międzynarodowy festiwal uzdrawiania duchowego</h3>
+                    <button class="register-btn" onclick="toggleForm('event4')">Zapisz się</button>
+                    <div id="event4" class="registration-form">
+                        <form class="event-form" onsubmit="submitForm(event, 'Londyn - międzynarodowy festiwal uzdrawiania duchowego')">
+                            <input type="text" name="name" placeholder="Imię i nazwisko" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="tel" name="phone" placeholder="Telefon" required>
+                            <textarea name="message" placeholder="Dodatkowe informacje"></textarea>
+                            <button type="submit">Wyślij zgłoszenie</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="event-item">
+                    <h3>Avalon Gate & Heart Chakram</h3>
+                    <button class="register-btn" onclick="toggleForm('event5')">Zapisz się</button>
+                    <div id="event5" class="registration-form">
+                        <form class="event-form" onsubmit="submitForm(event, 'Avalon Gate & Heart Chakram')">
+                            <input type="text" name="name" placeholder="Imię i nazwisko" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="tel" name="phone" placeholder="Telefon" required>
+                            <textarea name="message" placeholder="Dodatkowe informacje"></textarea>
+                            <button type="submit">Wyślij zgłoszenie</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="new-project-section">
+                    <h2>Nowy projekt:</h2>
+                    <h3>Przestrzeń, ziemia, powietrze, woda i ogień - festiwal żywiołów - zachodni Londyn</h3>
+                    <button class="register-btn newsletter-btn" onclick="toggleForm('newsletter')">Zapisz się do newslettera</button>
+                    <div id="newsletter" class="registration-form">
+                        <form class="event-form" onsubmit="submitForm(event, 'Newsletter - Festiwal Żywiołów')">
+                            <input type="text" name="name" placeholder="Imię i nazwisko" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <input type="tel" name="phone" placeholder="Telefon" required>
+                            <button type="submit">Zapisz się do newslettera</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="possibilities-section">
+                <h2>Możliwości:</h2>
+                <p>Jeśli jesteś zainteresowany dołączeniem do naszej przygody lub chcesz wziąć udział w naszych projektach.</p>
+                <a href="kontakt.html" class="register-btn">Napisz do nas</a>
+            </div>
+
+            <div class="social-links slide-in-right">
+                <a href="https://www.facebook.com/share/19jBeEK9w/" target="_blank" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://youtube.com/@akademiadusz?si=h9oEG1iwKHNwN6Ee" target="_blank" class="social-icon youtube">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+            </div>
+        </div>
+
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 by Cezary Engler</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

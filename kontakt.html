@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Academy of Souls</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="nebula"></div>
+    <div class="stars" id="stars"></div>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-item">Strona główna</a>
+            <a href="wydarzenia.html" class="nav-item">Wydarzenia</a>
+            <a href="galeria.html" class="nav-item">Galeria</a>
+            <a href="o-nas.html" class="nav-item">O nas</a>
+            <a href="kontakt.html" class="nav-item active">Kontakt</a>
+        </div>
+    </nav>
+
+    <main>
+        <h1 class="title-3d">Kontakt</h1>
+
+        <div class="content-section fade-in-section">
+            <div class="contact-logo fade-in-section">
+                <video autoplay loop muted playsinline class="contact-page-logo">
+                    <source src="video/academy of souls logo.mp4" type="video/mp4">
+                    Twoja przeglądarka nie obsługuje odtwarzania wideo.
+                </video>
+            </div>
+
+            <div class="contact-info fade-in-section">
+                <p class="contact-intro">Skontaktuj się z nami poprzez zamieszczoną poniżej formę</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <h3>Telefon:</h3>
+                        <p>Eric Soyka: (+44) 07545447111</p>
+                        <p>Cezary Engler: (+44) 07575726775</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>Email:</h3>
+                        <p>akademiadusz@gmail.com</p>
+                        <p>academyofsoulsuk@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form id="contact-form" onsubmit="submitForm(event, 'Formularz kontaktowy')">
+                    <input type="text" name="name" placeholder="Imię i nazwisko" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Telefon" required>
+                    <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
+                    <button type="submit" class="new-button-style">Wyślij wiadomość</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="social-links slide-in-right">
+            <a href="https://www.facebook.com/share/19jBeEUK9w/" target="_blank" class="social-icon facebook">
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
+            </a>
+            <a href="https://youtube.com/@akademiadusz?si=h9oEG1iwKHNwN6Ee" target="_blank" class="social-icon youtube">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 by Cezary Engler</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+/* Style dla sekcji kontaktu */
+.contact-page-logo {
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.contact-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}

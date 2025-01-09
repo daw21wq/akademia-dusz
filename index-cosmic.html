@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy of Souls - Kosmiczna Podróż</title>
+    <link rel="stylesheet" href="styles-cosmic.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="three-container"></div>
+    <div id="particles-js"></div>
+    <div class="cosmic-overlay"></div>
+    <div class="nebula-container">
+        <div class="nebula-effect"></div>
+    </div>
+
+    <div class="side-text">Głębina Duszy</div>
+
+    <main class="universe-container">
+        <nav class="cosmic-nav">
+            <a href="#journey" class="nav-link">Podróż</a>
+            <a href="#discoveries" class="nav-link">Odkrycia</a>
+            <a href="#mysteries" class="nav-link">Tajemnice</a>
+            <a href="#contact" class="nav-link">Kontakt</a>
+        </nav>
+
+        <section id="journey" class="cosmic-section active">
+            <div class="content-wrapper">
+                <div class="logo-container">
+                    <img src="images/akademia dusz 3 uscaler.png" alt="Academy of Souls Logo" class="logo">
+                </div>
+                <h1 class="cosmic-title">Academy of Souls</h1>
+                <p class="cosmic-text">Odkryj tajemnice duszy w kosmicznej podróży przez nieznane</p>
+            </div>
+        </section>
+
+        <section id="discoveries" class="cosmic-section">
+            <div class="content-wrapper">
+                <h2 class="section-title">Kosmiczne Odkrycia</h2>
+                <div class="discovery-cards">
+                    <div class="discovery-card" data-particle-effect="nebula">
+                        <div class="card-content">
+                            <h3>Rozwój Duchowy</h3>
+                            <p>Odkryj swoją wewnętrzną mądrość i potencjał</p>
+                        </div>
+                    </div>
+                    <div class="discovery-card" data-particle-effect="stardust">
+                        <div class="card-content">
+                            <h3>Transformacja</h3>
+                            <p>Przemień swoje życie poprzez głębokie doświadczenia</p>
+                        </div>
+                    </div>
+                    <div class="discovery-card" data-particle-effect="quantum">
+                        <div class="card-content">
+                            <h3>Twórcza Ekspresja</h3>
+                            <p>Wyraź siebie poprzez duchową sztukę</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mysteries" class="cosmic-section">
+            <div class="content-wrapper">
+                <h2 class="section-title">Kosmiczne Tajemnice</h2>
+                <div class="mystery-container">
+                    <div class="mystery-sphere">
+                        <div class="sphere-core"></div>
+                        <div class="energy-rings"></div>
+                    </div>
+                    <div class="mystery-text">
+                        <p>Odkryj sekrety ukryte w głębinach swojej duszy</p>
+                        <div class="event-cards">
+                            <div class="event-card">
+                                <h3>Dzień Zakochanych - Londyn</h3>
+                                <a href="#" class="event-link">Szczegóły</a>
+                            </div>
+                            <div class="event-card">
+                                <h3>Egipt - ekspedycja w głąb nieznanego</h3>
+                                <a href="#" class="event-link">Szczegóły</a>
+                            </div>
+                            <div class="event-card">
+                                <h3>Miłość, piasek i plaża - Południowa Francja</h3>
+                                <a href="#" class="event-link">Szczegóły</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="cosmic-section">
+            <div class="content-wrapper">
+                <h2 class="section-title">Nawiąż Kontakt</h2>
+                <div class="contact-container">
+                    <form class="cosmic-form">
+                        <div class="form-field">
+                            <input type="text" class="cosmic-input" placeholder="Twoje imię">
+                        </div>
+                        <div class="form-field">
+                            <input type="email" class="cosmic-input" placeholder="Twój email">
+                        </div>
+                        <div class="form-field">
+                            <textarea class="cosmic-input" placeholder="Twoja wiadomość"></textarea>
+                        </div>
+                        <button type="submit" class="cosmic-button">Wyślij wiadomość</button>
+                    </form>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/19jBeEUK9w/" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://youtube.com/@akademiadusz" target="_blank" class="social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script-cosmic.js"></script>
+    <script src="simple-three.js"></script>
+</body>
+</html>
