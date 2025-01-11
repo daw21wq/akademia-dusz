@@ -12,15 +12,22 @@ NODE_VERSION = "16"
   force = true
 
 [[redirects]]
-  from = "https://academyofsouls.com/"
-  to = "https://academyofsouls.com/en/"
-  status = 302
-  conditions = {Language = ["en"]}
+  from = "/"
+  to = "/en/index.html"
+  status = 200
+  conditions = {host = "academyofsouls.com"}
 
 [[redirects]]
-  from = "https://academyofsouls.com/*"
-  to = "https://academyofsouls.com/:splat"
+  from = "/en"
+  to = "/en/index.html"
   status = 200
+  conditions = {host = "academyofsouls.com"}
+
+[[redirects]]
+  from = "/en/*"
+  to = "/en/:splat"
+  status = 200
+  conditions = {host = "academyofsouls.com"}
 
 # Przekierowania dla akademiadusz.com
 [[redirects]]
@@ -30,14 +37,16 @@ NODE_VERSION = "16"
   force = true
 
 [[redirects]]
-  from = "https://akademiadusz.com/"
-  to = "https://akademiadusz.com/index.html"
+  from = "/"
+  to = "/index.html"
   status = 200
+  conditions = {host = "akademiadusz.com"}
 
 [[redirects]]
-  from = "https://akademiadusz.com/*"
-  to = "https://akademiadusz.com/:splat"
+  from = "/*"
+  to = "/:splat"
   status = 200
+  conditions = {host = "akademiadusz.com"}
 
 # Domyślne przekierowanie
 [[redirects]]
