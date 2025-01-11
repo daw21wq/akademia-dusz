@@ -12,21 +12,45 @@ NODE_VERSION = "16"
   force = true
 
 [[redirects]]
-  from = "/en"
-  to = "/index-en.html"
-  status = 200
-  conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
-
-[[redirects]]
-  from = "/en/*"
-  to = "/:splat"
-  status = 200
-  conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
-
-[[redirects]]
   from = "/"
   to = "/index-en.html"
   status = 200
+  force = true
+  conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
+
+[[redirects]]
+  from = "/en"
+  to = "/index-en.html"
+  status = 200
+  force = true
+  conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
+
+[[redirects]]
+  from = "/about"
+  to = "/about-en.html"
+  status = 200
+  force = true
+  conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
+
+[[redirects]]
+  from = "/events"
+  to = "/events-en.html"
+  status = 200
+  force = true
+  conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
+
+[[redirects]]
+  from = "/gallery"
+  to = "/gallery-en.html"
+  status = 200
+  force = true
+  conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact-en.html"
+  status = 200
+  force = true
   conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
 
 # Przekierowania dla wersji polskiej
@@ -40,13 +64,8 @@ NODE_VERSION = "16"
   from = "/"
   to = "/index.html"
   status = 200
+  force = true
   conditions = {host = ["akademiadusz.com", "www.akademiadusz.com"]}
-
-# Domyślne przekierowanie
-[[redirects]]
-  from = "/*"
-  to = "/:splat"
-  status = 200
 
 # Nagłówki bezpieczeństwa i cache
 [[headers]]
