@@ -6,10 +6,15 @@ NODE_VERSION = "16"
 
 # Przekierowania językowe
 [[redirects]]
+  from = "https://academyofsouls.com/"
+  to = "https://academyofsouls.com/en"
+  status = 302
+  conditions = {Language = ["en"]}
+
+[[redirects]]
   from = "https://academyofsouls.com/*"
   to = "https://academyofsouls.com/:splat"
   status = 200
-  conditions = {Language = ["en"]}
 
 [[redirects]]
   from = "https://akademiadusz.com/*"
