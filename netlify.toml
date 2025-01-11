@@ -1,7 +1,10 @@
 [build]
-publish = "/"
+publish = "."
 
 [[redirects]]
 from = "/*"
 to = "/index.html"
 status = 200
+
+[build.environment]
+NODE_VERSION = "16"
