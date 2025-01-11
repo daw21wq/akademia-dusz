@@ -4,28 +4,37 @@ publish = "."
 [build.environment]
 NODE_VERSION = "16"
 
-# Przekierowania językowe
+# Przekierowania dla wersji angielskiej (academyofsouls.com)
 [[redirects]]
   from = "/"
   to = "/en/index.html"
   status = 302
-  conditions = {Language = ["en"]}
+  conditions = {host = "academyofsouls.com", Language = ["en"]}
 
 [[redirects]]
   from = "/en/*"
   to = "/en/:splat"
   status = 200
+  conditions = {host = "academyofsouls.com"}
 
+# Przekierowania dla wersji polskiej (akademiadusz.com)
 [[redirects]]
   from = "/"
   to = "/index.html"
   status = 200
+  conditions = {host = "akademiadusz.com"}
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  conditions = {Language = ["pl"]}
+  conditions = {host = "akademiadusz.com"}
+
+# Domyślne przekierowanie
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 # Nagłówki bezpieczeństwa i cache
 [[headers]]
@@ -37,6 +46,7 @@ NODE_VERSION = "16"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob:; font-src 'self' https: data:;"
 
 [[headers]]
   for = "/*.js"
