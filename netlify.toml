@@ -4,56 +4,12 @@ publish = "."
 [build.environment]
 NODE_VERSION = "16"
 
-# Przekierowania dla wersji angielskiej
 [[redirects]]
   from = "https://www.academyofsouls.com/*"
   to = "https://academyofsouls.com/:splat"
   status = 301
   force = true
 
-[[redirects]]
-  from = "/"
-  to = "/index-en.html"
-  status = 200
-  force = true
-  conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
-
-[[redirects]]
-  from = "/en"
-  to = "/index-en.html"
-  status = 200
-  force = true
-  conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
-
-[[redirects]]
-  from = "/about"
-  to = "/about-en.html"
-  status = 200
-  force = true
-  conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
-
-[[redirects]]
-  from = "/events"
-  to = "/events-en.html"
-  status = 200
-  force = true
-  conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
-
-[[redirects]]
-  from = "/gallery"
-  to = "/gallery-en.html"
-  status = 200
-  force = true
-  conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
-
-[[redirects]]
-  from = "/contact"
-  to = "/contact-en.html"
-  status = 200
-  force = true
-  conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
-
-# Przekierowania dla wersji polskiej
 [[redirects]]
   from = "https://www.akademiadusz.com/*"
   to = "https://akademiadusz.com/:splat"
@@ -62,12 +18,18 @@ NODE_VERSION = "16"
 
 [[redirects]]
   from = "/"
+  to = "/index-en.html"
+  status = 200
+  force = true
+  conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
+
+[[redirects]]
+  from = "/"
   to = "/index.html"
   status = 200
   force = true
   conditions = {host = ["akademiadusz.com", "www.akademiadusz.com"]}
 
-# Nagłówki bezpieczeństwa i cache
 [[headers]]
   for = "/*"
   [headers.values]
