@@ -12,22 +12,10 @@ NODE_VERSION = "16"
   force = true
 
 [[redirects]]
-  from = "/en"
-  to = "/index-en.html"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/en/*"
-  to = "/index-en.html"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/"
   to = "/index-en.html"
   status = 200
-  conditions = {host = ["academyofsouls.com"]}
+  conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
 
 # Przekierowania dla wersji polskiej
 [[redirects]]
@@ -38,9 +26,9 @@ NODE_VERSION = "16"
 
 [[redirects]]
   from = "/"
-  to = "/pl/index.html"
+  to = "/index.html"
   status = 200
-  conditions = {host = ["akademiadusz.com"]}
+  conditions = {host = ["akademiadusz.com", "www.akademiadusz.com"]}
 
 [[redirects]]
   from = "/*"
