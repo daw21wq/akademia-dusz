@@ -12,14 +12,20 @@ NODE_VERSION = "16"
   force = true
 
 [[redirects]]
-  from = "/"
-  to = "/english/index.html"
-  status = 200
-  conditions = {host = ["academyofsouls.com"]}
+  from = "/en"
+  to = "/index-en.html"
+  status = 301
+  force = true
 
 [[redirects]]
-  from = "/*"
-  to = "/english/:splat"
+  from = "/en/*"
+  to = "/index-en.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/"
+  to = "/index-en.html"
   status = 200
   conditions = {host = ["academyofsouls.com"]}
 
