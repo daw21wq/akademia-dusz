@@ -4,31 +4,40 @@ publish = "."
 [build.environment]
 NODE_VERSION = "16"
 
-# Przekierowania dla wersji angielskiej (academyofsouls.com)
+# Przekierowania dla academyofsouls.com
 [[redirects]]
-  from = "/"
-  to = "/en/index.html"
+  from = "https://www.academyofsouls.com/*"
+  to = "https://academyofsouls.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://academyofsouls.com/"
+  to = "https://academyofsouls.com/en/"
   status = 302
-  conditions = {host = "academyofsouls.com", Language = ["en"]}
+  conditions = {Language = ["en"]}
 
 [[redirects]]
-  from = "/en/*"
-  to = "/en/:splat"
+  from = "https://academyofsouls.com/*"
+  to = "https://academyofsouls.com/:splat"
   status = 200
-  conditions = {host = "academyofsouls.com"}
 
-# Przekierowania dla wersji polskiej (akademiadusz.com)
+# Przekierowania dla akademiadusz.com
 [[redirects]]
-  from = "/"
-  to = "/index.html"
-  status = 200
-  conditions = {host = "akademiadusz.com"}
+  from = "https://www.akademiadusz.com/*"
+  to = "https://akademiadusz.com/:splat"
+  status = 301
+  force = true
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "https://akademiadusz.com/"
+  to = "https://akademiadusz.com/index.html"
   status = 200
-  conditions = {host = "akademiadusz.com"}
+
+[[redirects]]
+  from = "https://akademiadusz.com/*"
+  to = "https://akademiadusz.com/:splat"
+  status = 200
 
 # Domyślne przekierowanie
 [[redirects]]
