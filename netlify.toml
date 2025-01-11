@@ -19,13 +19,13 @@ NODE_VERSION = "16"
 
 [[redirects]]
   from = "/en"
-  to = "/"
+  to = "/index-en.html"
   status = 301
   force = true
 
 [[redirects]]
   from = "/"
-  to = "/index.html"
+  to = "/index-en.html"
   status = 200
   conditions = {host = ["academyofsouls.com"]}
 
