@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
+Sitemap: https://academyofsouls.com/sitemap.xml
 Sitemap: https://akademiadusz.com/sitemap.xml
 
 # Allow all bots to index the site
-Disallow:
+# Disallow duplicate content
+Disallow: /*?*
+Disallow: /*?
