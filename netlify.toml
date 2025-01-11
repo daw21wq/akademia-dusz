@@ -6,26 +6,26 @@ NODE_VERSION = "16"
 
 # Przekierowania językowe
 [[redirects]]
-  from = "https://academyofsouls.com/"
-  to = "https://academyofsouls.com/en"
+  from = "/"
+  to = "/en/index.html"
   status = 302
   conditions = {Language = ["en"]}
 
 [[redirects]]
-  from = "https://academyofsouls.com/*"
-  to = "https://academyofsouls.com/:splat"
+  from = "/en/*"
+  to = "/en/:splat"
   status = 200
 
 [[redirects]]
-  from = "https://akademiadusz.com/*"
-  to = "https://akademiadusz.com/:splat"
+  from = "/"
+  to = "/index.html"
   status = 200
-  conditions = {Language = ["pl"]}
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  conditions = {Language = ["pl"]}
 
 # Nagłówki bezpieczeństwa i cache
 [[headers]]
