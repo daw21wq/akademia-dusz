@@ -1,9 +1,6 @@
 [build]
 publish = "."
 
-[build.environment]
-NODE_VERSION = "16"
-
 [[redirects]]
   from = "https://www.academyofsouls.com/*"
   to = "https://academyofsouls.com/:splat"
@@ -20,15 +17,18 @@ NODE_VERSION = "16"
   from = "/"
   to = "/index-en.html"
   status = 200
-  force = true
   conditions = {host = ["academyofsouls.com", "www.academyofsouls.com"]}
 
 [[redirects]]
   from = "/"
   to = "/index.html"
   status = 200
-  force = true
   conditions = {host = ["akademiadusz.com", "www.akademiadusz.com"]}
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
 
 [[headers]]
   for = "/*"
