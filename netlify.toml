@@ -2,19 +2,6 @@
 publish = "."
 
 [[redirects]]
-  from = "https://www.academyofsouls.com/*"
-  to = "https://academyofsouls.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://www.akademiadusz.com/*"
-  to = "https://akademiadusz.com/:splat"
-  status = 301
-  force = true
-
-# Przekierowania dla wersji angielskiej
-[[redirects]]
   from = "/"
   to = "/index-en.html"
   status = 200
@@ -22,70 +9,12 @@ publish = "."
   conditions = {host = ["academyofsouls.com"]}
 
 [[redirects]]
-  from = "/about"
-  to = "/about-en.html"
-  status = 200
-  force = true
-  conditions = {host = ["academyofsouls.com"]}
-
-[[redirects]]
-  from = "/events"
-  to = "/events-en.html"
-  status = 200
-  force = true
-  conditions = {host = ["academyofsouls.com"]}
-
-[[redirects]]
-  from = "/gallery"
-  to = "/gallery-en.html"
-  status = 200
-  force = true
-  conditions = {host = ["academyofsouls.com"]}
-
-[[redirects]]
-  from = "/contact"
-  to = "/contact-en.html"
-  status = 200
-  force = true
-  conditions = {host = ["academyofsouls.com"]}
-
-# Przekierowania dla wersji polskiej
-[[redirects]]
   from = "/"
   to = "/index.html"
   status = 200
   force = true
   conditions = {host = ["akademiadusz.com"]}
 
-[[redirects]]
-  from = "/o-nas"
-  to = "/o-nas.html"
-  status = 200
-  force = true
-  conditions = {host = ["akademiadusz.com"]}
-
-[[redirects]]
-  from = "/wydarzenia"
-  to = "/wydarzenia.html"
-  status = 200
-  force = true
-  conditions = {host = ["akademiadusz.com"]}
-
-[[redirects]]
-  from = "/galeria"
-  to = "/galeria.html"
-  status = 200
-  force = true
-  conditions = {host = ["akademiadusz.com"]}
-
-[[redirects]]
-  from = "/kontakt"
-  to = "/kontakt.html"
-  status = 200
-  force = true
-  conditions = {host = ["akademiadusz.com"]}
-
-# Przekierowanie 404
 [[redirects]]
   from = "/*"
   to = "/404.html"
