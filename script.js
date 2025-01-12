@@ -144,41 +144,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize event registration forms
     handleEventRegistrationForms();
 
-    // Mobile menu
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    // Mobile Menu
+    const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const body = document.body;
 
-    if (mobileMenuBtn && navLinks) {
-        mobileMenuBtn.addEventListener('click', function() {
-            this.classList.toggle('active');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
             body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
         });
 
         // Close menu when clicking a link
-        const navItems = navLinks.querySelectorAll('.nav-item');
-        navItems.forEach(item => {
-            item.addEventListener('click', () => {
-                mobileMenuBtn.classList.remove('active');
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
                 body.style.overflow = '';
             });
         });
 
         // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                mobileMenuBtn.classList.remove('active');
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !hamburger.contains(e.target) && navLinks.classList.contains('active')) {
+                hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
                 body.style.overflow = '';
             }
         });
 
         // Close menu on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                mobileMenuBtn.classList.remove('active');
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
                 body.style.overflow = '';
             }

@@ -1,134 +1,125 @@
-/* Navigation styles */
-header {
+/* Navigation */
+nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    padding: 15px;
     background: rgba(0, 0, 0, 0.8);
-}
-
-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    position: relative;
-}
-
-.logo {
-    z-index: 1001;
+    z-index: 1000;
 }
 
 .logo a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
-/* Mobile menu button */
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1001;
-}
-
-.mobile-menu-btn span {
-    display: block;
-    width: 25px;
-    height: 2px;
-    background-color: #fff;
-    margin: 5px 0;
-    transition: 0.3s;
-}
-
-/* Navigation links */
 .nav-links {
     display: flex;
-    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-item {
-    color: #fff;
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s;
+    font-size: 1em;
 }
 
-.nav-item:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: #ffd700;
 }
 
-.nav-item.active {
-    color: #ffd700;
+.hamburger {
+    display: none;
+    cursor: pointer;
 }
 
-/* Mobile styles */
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
 @media screen and (max-width: 768px) {
-    .mobile-menu-btn {
+    .hamburger {
         display: block;
+        z-index: 2;
     }
 
     .nav-links {
         position: fixed;
         top: 0;
-        left: -100%;
+        right: -100%;
         width: 100%;
         height: 100vh;
         background: rgba(0, 0, 0, 0.95);
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        transition: 0.3s;
-        padding: 2rem;
+        justify-content: center;
+        transition: 0.5s ease;
+        margin: 0;
+        padding: 0;
     }
 
     .nav-links.active {
-        left: 0;
+        right: 0;
     }
 
-    /* Hamburger menu animation */
-    .mobile-menu-btn.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+    .nav-links li {
+        margin: 20px 0;
     }
 
-    .mobile-menu-btn.active span:nth-child(2) {
+    .nav-links a {
+        font-size: 1.2em;
+    }
+
+    /* Hamburger Animation */
+    .hamburger.active .line:nth-child(2) {
         opacity: 0;
     }
 
-    .mobile-menu-btn.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
+    .hamburger.active .line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
 
-/* iPhone 13 mini specific */
+/* iPhone 13 mini */
 @media screen and (max-width: 375px) {
-    .nav-item {
-        font-size: 1.1rem;
-        padding: 0.8rem;
+    nav {
+        padding: 10px;
     }
 
     .logo a {
-        font-size: 1rem;
+        font-size: 1em;
     }
 
-    .mobile-menu-btn span {
+    .nav-links a {
+        font-size: 1.1em;
+    }
+
+    .hamburger .line {
         width: 22px;
+        height: 2px;
+        margin: 4px;
     }
-}
-
-:root {
-    --gradient-start: #8b7bb5;
-    --gradient-end: #4a3b6b;
-    --text-color: #1a2b57;
-    --accent-blue: #3b5998;
-    --light-purple: #e6e1f4;
-    --gold: #ffd700;
-    --gold-light: #fff6d5;
-    --gold-dark: #ffd700;
 }
 
 /* Starry Background */
