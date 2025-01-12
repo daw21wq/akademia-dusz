@@ -413,7 +413,7 @@ nav {
     box-shadow: 
         0 4px 15px rgba(0,0,0,0.1),
         0 0 20px rgba(255,215,0,0.1);
-    text-shadow: 0 0 5px rgba(255,215,0,0.5);
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
 }
 
 .start-journey:hover {
@@ -2333,25 +2333,56 @@ footer {
     transition: all 0.3s ease;
 }
 
+/* Hamburger menu animation */
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
 /* Mobile menu styles */
 @media screen and (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
-        position: absolute;
-        right: 20px;
-        top: 20px;
+        position: fixed;
+        right: 15px;
+        top: 15px;
+        z-index: 1001;
+    }
+
+    .mobile-menu-btn span {
+        width: 22px;
+        height: 2px;
+        margin: 4px 0;
     }
 
     .nav-links {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%;
+        width: 100%;
         height: 100vh;
         background: rgba(0, 0, 0, 0.95);
-        padding: 80px 20px 20px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 60px 20px 20px;
         transition: all 0.3s ease;
-        z-index: 999;
+        z-index: 1000;
     }
 
     .nav-links.active {
@@ -2360,36 +2391,99 @@ footer {
 
     .nav-container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
     }
 
     .nav-item {
-        margin: 10px 0;
-        font-size: 1.2em;
+        margin: 15px 0;
+        font-size: 1.3em;
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s ease;
     }
 
-    /* Hamburger menu animation */
-    .mobile-menu-btn.active span:nth-child(1) {
-        transform: rotate(45deg) translate(8px, 6px);
+    .nav-item:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
     }
 
-    .mobile-menu-btn.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .mobile-menu-btn.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -5px);
-    }
-
-    /* Adjust logo position */
+    /* Logo adjustments */
     .logo {
-        position: absolute;
-        left: 20px;
-        top: 20px;
+        position: fixed;
+        left: 15px;
+        top: 15px;
+        z-index: 1001;
+        font-size: 0.9em;
     }
 
-    /* Adjust main content */
+    /* Main content adjustments */
     main {
-        padding-top: 70px;
+        padding-top: 60px;
+    }
+
+    /* Section adjustments */
+    .section {
+        padding: 40px 15px;
+    }
+
+    /* Button adjustments */
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 1em;
+        margin: 10px 5px;
+    }
+}
+
+/* iPhone 13 mini specific adjustments */
+@media screen and (max-width: 375px) {
+    .mobile-menu-btn {
+        right: 10px;
+        top: 10px;
+    }
+
+    .mobile-menu-btn span {
+        width: 20px;
+        height: 2px;
+        margin: 3px 0;
+    }
+
+    .logo {
+        left: 10px;
+        top: 10px;
+        font-size: 0.85em;
+    }
+
+    .nav-item {
+        font-size: 1.2em;
+        padding: 8px 15px;
+    }
+
+    .nav-links {
+        padding: 50px 15px 15px;
+    }
+
+    main {
+        padding-top: 50px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.95em;
     }
 }
