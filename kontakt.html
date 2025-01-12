@@ -27,38 +27,18 @@
 
         <div class="content-section fade-in-section">
             <div class="contact-logo fade-in-section">
-                <video autoplay loop muted playsinline class="contact-page-logo">
-                    <source src="video/academy of souls logo.mp4" type="video/mp4">
-                    Twoja przeglądarka nie obsługuje odtwarzania wideo.
-                </video>
+                <img src="images/akademia dusz 3 uscaler.png" alt="Academy of Souls Logo" class="contact-page-logo">
             </div>
-
-            <div class="contact-info fade-in-section">
-                <p class="contact-intro">Skontaktuj się z nami poprzez zamieszczoną poniżej formę</p>
-                
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <h3>Telefon:</h3>
-                        <p>Eric Soyka: (+44) 07545447111</p>
-                        <p>Cezary Engler: (+44) 07575726775</p>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <h3>Email:</h3>
-                        <p>akademiadusz@gmail.com</p>
-                        <p>academyofsoulsuk@gmail.com</p>
-                    </div>
-                </div>
-            </div>
-
             <div class="contact-form">
-                <form id="contact-form" onsubmit="submitForm(event, 'Formularz kontaktowy')">
+                <form id="contact-form" onsubmit="submitContactForm(event)">
                     <input type="text" name="name" placeholder="Imię i nazwisko" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="tel" name="phone" placeholder="Telefon" required>
+                    <input type="hidden" name="eventName" value="Formularz kontaktowy">
                     <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
                     <button type="submit" class="new-button-style">Wyślij wiadomość</button>
                 </form>
+                <p class="contact-message">Dziękujemy za Twoją wiadomość! Zazwyczaj odpowiadamy natychmiast, jednak jeśli nie będziemy w stanie odpowiedzieć w ciągu tego samego dnia, skontaktujemy się z Tobą w najbliższym możliwym terminie. Dziękujemy za zrozumienie i cierpliwość. Jeśli masz jakiekolwiek pytania lub potrzebujesz dodatkowych informacji, prosimy o kontakt!</p>
             </div>
         </div>
 
@@ -78,6 +58,7 @@
         <p>&copy; 2025 by Cezary Engler</p>
     </footer>
 
+    <script src="js/form-handler.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

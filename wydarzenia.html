@@ -42,10 +42,10 @@
                 </div>
                 
                 <div class="event-item">
-                    <h3>Egipt - ekspedycja naukowo-rozrywkowa</h3>
+                    <h3>Egipt - ekspedycja w głąb nieznanego</h3>
                     <button class="register-btn" onclick="toggleForm('event2')">Zapisz się</button>
                     <div id="event2" class="registration-form">
-                        <form class="event-form" onsubmit="submitForm(event, 'Egipt - ekspedycja naukowo-rozrywkowa')">
+                        <form class="event-form" onsubmit="submitForm(event, 'Egipt - ekspedycja w głąb nieznanego')">
                             <input type="text" name="name" placeholder="Imię i nazwisko" required>
                             <input type="email" name="email" placeholder="Email" required>
                             <input type="tel" name="phone" placeholder="Telefon" required>
@@ -54,7 +54,7 @@
                         </form>
                     </div>
                 </div>
-
+                
                 <div class="event-item">
                     <h3>Miłość, piasek i plaża - Południowa Francja</h3>
                     <button class="register-btn" onclick="toggleForm('event3')">Zapisz się</button>
@@ -68,7 +68,7 @@
                         </form>
                     </div>
                 </div>
-
+                
                 <div class="event-item">
                     <h3>Londyn - międzynarodowy festiwal uzdrawiania duchowego</h3>
                     <button class="register-btn" onclick="toggleForm('event4')">Zapisz się</button>
@@ -96,19 +96,21 @@
                         </form>
                     </div>
                 </div>
+            </div>
 
-                <div class="new-project-section">
-                    <h2>Nowy projekt:</h2>
-                    <h3>Przestrzeń, ziemia, powietrze, woda i ogień - festiwal żywiołów - zachodni Londyn</h3>
-                    <button class="register-btn newsletter-btn" onclick="toggleForm('newsletter')">Zapisz się do newslettera</button>
-                    <div id="newsletter" class="registration-form">
-                        <form class="event-form" onsubmit="submitForm(event, 'Newsletter - Festiwal Żywiołów')">
-                            <input type="text" name="name" placeholder="Imię i nazwisko" required>
-                            <input type="email" name="email" placeholder="Email" required>
-                            <input type="tel" name="phone" placeholder="Telefon" required>
-                            <button type="submit">Zapisz się do newslettera</button>
-                        </form>
-                    </div>
+            <div class="new-project-section">
+                <h2>Nowy projekt:</h2>
+                <h3>Przestrzeń, ziemia, powietrze, woda i ogień - festiwal żywiołów - zachodni Londyn</h3>
+                <p>Jeśli jesteś zainteresowany dołączeniem do naszej przygody lub chcesz wziąć udział w naszym projekcie.</p>
+                <button class="register-btn" onclick="toggleForm('new-project')">Zapisz się</button>
+                <div id="new-project" class="registration-form">
+                    <form class="event-form" onsubmit="submitForm(event, 'Festiwal żywiołów - zachodni Londyn')">
+                        <input type="text" name="name" placeholder="Imię i nazwisko" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="tel" name="phone" placeholder="Telefon" required>
+                        <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
+                        <button type="submit">Wyślij zgłoszenie</button>
+                    </form>
                 </div>
             </div>
 
