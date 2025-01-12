@@ -144,36 +144,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize event registration forms
     handleEventRegistrationForms();
 
-    // Mobile menu functionality
+    // Mobile menu
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
     const body = document.body;
 
     if (mobileMenuBtn && navLinks) {
-        // Toggle menu
-        mobileMenuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            mobileMenuBtn.classList.toggle('active');
+        mobileMenuBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
             navLinks.classList.toggle('active');
             body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
         });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target) && navLinks.classList.contains('active')) {
-                mobileMenuBtn.classList.remove('active');
-                navLinks.classList.remove('active');
-                body.style.overflow = '';
-            }
-        });
-
-        // Prevent clicks inside menu from closing it
-        navLinks.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
-
         // Close menu when clicking a link
-        const navItems = document.querySelectorAll('.nav-item');
+        const navItems = navLinks.querySelectorAll('.nav-item');
         navItems.forEach(item => {
             item.addEventListener('click', () => {
                 mobileMenuBtn.classList.remove('active');
@@ -182,9 +166,18 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+                body.style.overflow = '';
+            }
+        });
+
         // Close menu on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
                 mobileMenuBtn.classList.remove('active');
                 navLinks.classList.remove('active');
                 body.style.overflow = '';

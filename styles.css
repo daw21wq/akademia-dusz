@@ -1,3 +1,125 @@
+/* Navigation styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.logo {
+    z-index: 1001;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Mobile menu button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #ffd700;
+}
+
+.nav-item.active {
+    color: #ffd700;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        padding: 2rem;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    /* Hamburger menu animation */
+    .mobile-menu-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+/* iPhone 13 mini specific */
+@media screen and (max-width: 375px) {
+    .nav-item {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+
+    .logo a {
+        font-size: 1rem;
+    }
+
+    .mobile-menu-btn span {
+        width: 22px;
+    }
+}
+
 :root {
     --gradient-start: #8b7bb5;
     --gradient-end: #4a3b6b;
