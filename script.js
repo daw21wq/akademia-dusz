@@ -131,6 +131,8 @@ function handleEventRegistrationForms() {
 
 // Initialize everything when the document is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded'); // Debug log
+
     // Create starry background
     createStars();
     
@@ -148,10 +150,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.getElementById('mobile-menu');
     const navContainer = document.querySelector('.nav-container');
 
+    console.log('Mobile menu element:', mobileMenu); // Debug log
+    console.log('Nav container element:', navContainer); // Debug log
+
     if (mobileMenu && navContainer) {
         mobileMenu.addEventListener('click', function() {
+            console.log('Menu clicked'); // Debug log
             navContainer.classList.toggle('active');
-            console.log('Menu clicked');
         });
 
         // Zamykanie menu po kliknięciu w link
@@ -167,6 +172,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 navContainer.classList.remove('active');
             }
         });
+    } else {
+        console.error('Menu elements not found!'); // Debug log
     }
 });
 
