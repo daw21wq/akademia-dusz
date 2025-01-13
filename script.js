@@ -145,12 +145,11 @@ document.addEventListener('DOMContentLoaded', function() {
     handleEventRegistrationForms();
 
     // Menu mobilne
-    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
     const navContainer = document.querySelector('.nav-container');
 
-    if (menuToggle && navContainer) {
-        menuToggle.addEventListener('click', function(e) {
-            e.preventDefault();
+    if (mobileMenu && navContainer) {
+        mobileMenu.addEventListener('click', function() {
             navContainer.classList.toggle('active');
             console.log('Menu clicked');
         });
@@ -164,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Zamykanie menu po kliknięciu poza menu
         document.addEventListener('click', function(e) {
-            if (!navContainer.contains(e.target) && !menuToggle.contains(e.target) && navContainer.classList.contains('active')) {
+            if (!navContainer.contains(e.target) && !mobileMenu.contains(e.target) && navContainer.classList.contains('active')) {
                 navContainer.classList.remove('active');
             }
         });
