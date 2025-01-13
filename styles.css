@@ -2430,22 +2430,40 @@ footer {
     position: fixed;
     right: 1rem;
     top: 1rem;
-    z-index: 1000;
-    background: rgba(138, 43, 226, 0.2);
+    z-index: 1001;
+    background: rgba(138, 43, 226, 0.5);
     backdrop-filter: blur(10px);
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background: rgba(138, 43, 226, 0.7);
+    transform: scale(1.05);
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    background: rgba(74, 20, 140, 0.95);
+    backdrop-filter: blur(10px);
 }
 
 @media screen and (max-width: 767px) {
     .menu-toggle {
         display: block;
-    }
-
-    nav {
-        position: fixed;
-        width: 100%;
-        z-index: 999;
     }
 
     .nav-container {

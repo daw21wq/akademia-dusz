@@ -149,9 +149,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const navContainer = document.querySelector('.nav-container');
 
     if (menuToggle && navContainer) {
-        menuToggle.addEventListener('click', () => {
+        menuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
             navContainer.classList.toggle('active');
-            console.log('Menu clicked'); // Dodajemy log do debugowania
+            console.log('Menu clicked');
         });
 
         // Zamykanie menu po kliknięciu w link
@@ -159,6 +160,13 @@ document.addEventListener('DOMContentLoaded', function() {
             item.addEventListener('click', () => {
                 navContainer.classList.remove('active');
             });
+        });
+
+        // Zamykanie menu po kliknięciu poza menu
+        document.addEventListener('click', function(e) {
+            if (!navContainer.contains(e.target) && !menuToggle.contains(e.target) && navContainer.classList.contains('active')) {
+                navContainer.classList.remove('active');
+            }
         });
     }
 });
