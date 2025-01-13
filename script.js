@@ -130,7 +130,7 @@ function handleEventRegistrationForms() {
 }
 
 // Initialize everything when the document is loaded
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     // Create starry background
     createStars();
     
@@ -143,21 +143,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize event registration forms
     handleEventRegistrationForms();
-});
 
-// Menu mobilne
-const menuToggle = document.querySelector('.menu-toggle');
-const navContainer = document.querySelector('.nav-container');
+    // Menu mobilne
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navContainer = document.querySelector('.nav-container');
 
-menuToggle.addEventListener('click', () => {
-    navContainer.classList.toggle('active');
-});
+    if (menuToggle && navContainer) {
+        menuToggle.addEventListener('click', () => {
+            navContainer.classList.toggle('active');
+            console.log('Menu clicked'); // Dodajemy log do debugowania
+        });
 
-// Zamykanie menu po kliknięciu w link
-document.querySelectorAll('.nav-item').forEach(item => {
-    item.addEventListener('click', () => {
-        navContainer.classList.remove('active');
-    });
+        // Zamykanie menu po kliknięciu w link
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                navContainer.classList.remove('active');
+            });
+        });
+    }
 });
 
 // Add smooth scrolling for navigation
