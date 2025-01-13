@@ -2313,3 +2313,106 @@ footer {
         font-size: 1rem;
     }
 }
+
+/* Responsive Styles */
+/* Desktop (powyżej 1024px) */
+@media screen and (min-width: 1024px) {
+    main {
+        max-width: 1200px;
+        padding: 2rem 4rem;
+    }
+    
+    .title-3d {
+        font-size: 3.5rem;
+    }
+}
+
+/* Tablet (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    main {
+        max-width: 90%;
+        padding: 2rem;
+    }
+    
+    .title-3d {
+        font-size: 2.8rem;
+    }
+
+    .nav-container {
+        gap: 1rem;
+    }
+}
+
+/* iPhone 13 Mini i podobne telefony (do 767px) */
+@media screen and (max-width: 767px) {
+    main {
+        max-width: 100%;
+        padding: 1rem;
+    }
+    
+    .title-3d {
+        font-size: 2rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card,
+    .event-card,
+    .team-member,
+    .value-item {
+        padding: 1rem;
+    }
+
+    .logo {
+        max-width: 150px;
+    }
+
+    .member-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Specyficzne dostosowania dla iPhone 13 Mini */
+@media screen and (max-width: 375px) {
+    .title-3d {
+        font-size: 1.8rem;
+    }
+
+    .nav-item {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+}
