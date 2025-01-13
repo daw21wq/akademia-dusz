@@ -145,6 +145,21 @@ document.addEventListener('DOMContentLoaded', () => {
     handleEventRegistrationForms();
 });
 
+// Menu mobilne
+const menuToggle = document.querySelector('.menu-toggle');
+const navContainer = document.querySelector('.nav-container');
+
+menuToggle.addEventListener('click', () => {
+    navContainer.classList.toggle('active');
+});
+
+// Zamykanie menu po kliknięciu w link
+document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', () => {
+        navContainer.classList.remove('active');
+    });
+});
+
 // Add smooth scrolling for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
