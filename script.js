@@ -131,61 +131,26 @@ function handleEventRegistrationForms() {
 
 // Initialize everything when the document is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded'); // Debug log
-
-    // Create starry background
-    createStars();
-    
-    // Initialize scroll animations
-    const animatedElements = document.querySelectorAll('.fade-in-section, .slide-in-left, .slide-in-right, .zoom-in');
-    animatedElements.forEach(el => observer.observe(el));
-
-    // Initialize contact form
-    handleContactForm();
-
-    // Initialize event registration forms
-    handleEventRegistrationForms();
-
     // Menu mobilne
     const menuBtn = document.querySelector('.menu-btn');
     const nav = document.querySelector('nav');
 
-    console.log('Menu button:', menuBtn);
-    console.log('Navigation:', nav);
-
     if (menuBtn && nav) {
         menuBtn.addEventListener('click', function() {
-            console.log('Menu clicked');
             nav.classList.toggle('active');
         });
+    }
 
-        // Zamykanie menu po kliknięciu w link
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', () => {
-                nav.classList.remove('active');
-            });
-        });
-
-        // Zamykanie menu po kliknięciu poza menu
-        document.addEventListener('click', function(e) {
-            if (!nav.contains(e.target) && !menuBtn.contains(e.target) && nav.classList.contains('active')) {
-                nav.classList.remove('active');
+    // Add smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
             }
         });
-    } else {
-        console.error('Menu elements not found!');
-    }
-});
-
-// Add smooth scrolling for navigation
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
     });
 });
