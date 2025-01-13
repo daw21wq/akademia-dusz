@@ -147,33 +147,33 @@ document.addEventListener('DOMContentLoaded', function() {
     handleEventRegistrationForms();
 
     // Menu mobilne
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navContainer = document.querySelector('.nav-container');
+    const menuBtn = document.querySelector('.menu-btn');
+    const nav = document.querySelector('nav');
 
-    console.log('Mobile menu element:', mobileMenu); // Debug log
-    console.log('Nav container element:', navContainer); // Debug log
+    console.log('Menu button:', menuBtn);
+    console.log('Navigation:', nav);
 
-    if (mobileMenu && navContainer) {
-        mobileMenu.addEventListener('click', function() {
-            console.log('Menu clicked'); // Debug log
-            navContainer.classList.toggle('active');
+    if (menuBtn && nav) {
+        menuBtn.addEventListener('click', function() {
+            console.log('Menu clicked');
+            nav.classList.toggle('active');
         });
 
         // Zamykanie menu po kliknięciu w link
         document.querySelectorAll('.nav-item').forEach(item => {
             item.addEventListener('click', () => {
-                navContainer.classList.remove('active');
+                nav.classList.remove('active');
             });
         });
 
         // Zamykanie menu po kliknięciu poza menu
         document.addEventListener('click', function(e) {
-            if (!navContainer.contains(e.target) && !mobileMenu.contains(e.target) && navContainer.classList.contains('active')) {
-                navContainer.classList.remove('active');
+            if (!nav.contains(e.target) && !menuBtn.contains(e.target) && nav.classList.contains('active')) {
+                nav.classList.remove('active');
             }
         });
     } else {
-        console.error('Menu elements not found!'); // Debug log
+        console.error('Menu elements not found!');
     }
 });
 
